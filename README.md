@@ -1,30 +1,15 @@
 # my-world
 
-> A Vue.js project
+> 一个简单的css动画库
 
-## Build Setup
+# 使用
 
-``` bash
-# install dependencies
-npm install
+> 在需要使用动画的地方加上想要的动画类名就行。
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+例如： 
 ```
+<div class="animation infinite a-fade-in"></div>
+```
+在这个项目里面，需要加上```animation```类，```infinite```表示循环播放。
+```a-fade-in``` 是你所需要的动画名称。
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
