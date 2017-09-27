@@ -2,6 +2,7 @@
   <div class="container clearfix">
      <div class="animation-item" v-for="item in animationList" :key="item"> 
        <div class="animation infinite" :class="item"></div>
+       <p class="class-title">{{ item }}</p>
      </div>
   </div>
 </template>
@@ -30,7 +31,17 @@ export default {
         // 'a-fade-out-right',
         // 'a-fade-out-top',
         // 'a-fade-out-bottom'
-        'a-light-speed-in'
+        'a-light-speed-in',
+        'a-rotate-in',
+        // 'a-rotate-in-down-left',
+        // 'a-rotate-in-up-left',
+        'a-tack',
+        'a-scale-swing',
+        'a-roll-in',
+        'a-radius',
+        'a-height',
+        // 'a-width',
+        'a-out-line'
       ]
     }
   }
@@ -43,8 +54,6 @@ export default {
     margin: 0 auto;
   }
   .animation-item {
-    width: 100px;
-    height: 100px;
     margin: 10px;
     float: left;
     div {
@@ -56,6 +65,10 @@ export default {
       line-height: 100px;
       text-align: center;
       box-sizing: border-box;
+    }
+    .class-title {
+      padding-top: 15px;
+      text-align: center;
     }
   }
 </style>

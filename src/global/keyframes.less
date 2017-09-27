@@ -273,6 +273,7 @@
     transform: translate3d(0px, 40px, 0);
   }
 }
+// 平滑变形进入
 @keyframes lightSpeedIn {
   from {
     transform: translate3d(100%, 0, 0) skewX(-30deg);
@@ -292,5 +293,149 @@
   to {
     transform: none;
     opacity: 1;
+  }
+}
+// 旋转出现
+@keyframes rotateIn {
+  from {
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 0;
+  }
+
+  to {
+    transform-origin: center;
+    transform: none;
+    opacity: 1;
+  }
+}
+// 由左边旋转向下出现
+@keyframes rotateInDownLeft {
+  from {
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+
+  to {
+    transform-origin: left bottom;
+    transform: none;
+    opacity: 1;
+  }
+}
+// 由左边旋转向上出现
+@keyframes rotateInUpLeft {
+  from {
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+  }
+
+  to {
+    transform-origin: left bottom;
+    transform: none;
+    opacity: 1;
+  }
+}
+// 右上角固定摆动
+@keyframes tack {
+  0% {
+    transform-origin: top right;
+    animation-timing-function: ease-in-out;
+  }
+
+  20%, 60% {
+    transform: rotate3d(0, 0, 1, -80deg);
+    transform-origin: top right;
+    animation-timing-function: ease-in-out;
+  }
+
+  40%, 80% {
+    transform: rotate3d(0, 0, 1, -50deg);
+    transform-origin: top right;
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(100px, 0, 0);
+    opacity: 0;
+  }
+}
+// 由小放大 摆动
+@keyframes scaleSwing {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    transform: rotate(3deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+// 自左向右滚动进入
+@keyframes rollIn {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, -10px, 0) rotate3d(0, 0, 1, -120deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+// 圆角
+@keyframes radius {
+  from {
+    border-radius: 0;
+  }
+  to {
+    border-radius: 50%;
+  }
+}
+// 高度
+@keyframes height {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100px;
+  }
+}
+// 宽度
+@keyframes width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100px;
+  }
+}
+// 宽度
+@keyframes outLine {
+  from {
+    outline-offset: -10px;
+  }
+  to {
+    outline-offset: 20px;
+  }
+}
+@keyframes roll360 {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
   }
 }

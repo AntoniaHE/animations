@@ -2,7 +2,7 @@
  * @Author: hemei 
  * @Date: 2017-07-27 14:28:04 
  * @Last Modified by: hemei
- * @Last Modified time: 2017-09-14 15:03:02
+ * @Last Modified time: 2017-09-26 16:46:23
  */
 
 @charset "UTF-8";
@@ -16,7 +16,10 @@
 .infinite {
   animation-iteration-count: infinite;
 }
-
+// 动画交替反向运行，反向运行时，动画按步后退,同时，带时间功能的函数也反向
+.alternate {
+  animation-direction: alternate;
+}
 // 动画类使用
 // 弹跳
 .a-bounce {
@@ -95,6 +98,52 @@
 .a-fade-out-bottom {
   animation-name: fadeOutBottom;
 }
+// 平滑变形进入
 .a-light-speed-in {
   animation-name: lightSpeedIn;
+}
+// 旋转出现
+.a-rotate-in {
+  animation-name: rotateIn;
+}
+// 由左边旋转向下出现
+.a-rotate-in-down-left {
+  animation-name: rotateInDownLeft;
+}
+// 由左边旋转向上出现
+.a-rotate-in-up-left {
+  animation-name: rotateInUpLeft;
+}
+// 右上角固定摆动
+.a-tack {
+  animation-name: tack;
+}
+// 由小放大 摆动
+.a-scale-swing {
+  animation-name: scaleSwing;
+}
+// 自左向右滚动进入
+.a-roll-in {
+  animation-name: rollIn;
+}
+// 圆角
+.a-radius {
+  animation-name: radius;
+  animation-direction: alternate;
+  animation-duration: 1s;
+}
+// 高度
+.a-height {
+  animation-name: height;
+  animation-direction: alternate-reverse;
+}
+// 宽度
+.a-width {
+  animation-name: width;
+  animation-direction: alternate-reverse;
+}
+.a-out-line {
+  animation-name: outLine;
+  outline: 1px solid #ccc;
+  animation-direction: alternate;
 }
