@@ -1,4 +1,4 @@
-# my-world
+# animations
 
 > 一个简单的css动画库
 
